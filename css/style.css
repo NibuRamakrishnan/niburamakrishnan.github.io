@@ -1183,22 +1183,7 @@ p.subtitle {
 	
 	cursor: pointer;
 	transform:scale(0.98);  
- }
- .servicebtn
-  {
-    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
-  font-size: 5rem;
-  width: 100%;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 1.3rem;
-  display: flex;
-  justify-content: space-around;
-    align-items: center;
-    background-color: rgb(247, 247, 247);
-  }
+ } 
   .aboutusob span{
     display: block;
     padding-bottom: 1.5rem;
@@ -1229,4 +1214,53 @@ p.subtitle {
     cursor: pointer;
     transform:scale(0.98);
   }
+
+
+   /* Styling modal */
+   .modal:before {
+	content: '';
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+}
+  
+.modal-dialog {
+	display: inline-block;
+	vertical-align: middle;
+}
+  
+.modal .modal-content { 
+	-webkit-animation-name: modal-animation;
+	-webkit-animation-duration: 0.5s;
+	animation-name: modal-animation;
+	animation-duration: 0.5s; 
+}
+  
+@-webkit-keyframes modal-animation {
+	from {
+		top: -100px;
+		opacity: 0;
+	}
+	to {
+		top: 0px;
+		opacity: 1;
+	}
+}
+  
+@keyframes modal-animation {
+	from {
+		top: -100px;
+		opacity: 0;
+	}
+	to {
+		top: 0px;
+		opacity: 1;
+	}
+}
+.advImageStyle{ 
+	width: 100% !important;
+}
+#advertismentModal{
+	text-align: center; 
+}
 /* ===== End buttons ===== */
