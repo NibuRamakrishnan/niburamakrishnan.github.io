@@ -4,7 +4,7 @@
 
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Obscura Security</title>
+		<title>Obscura Security Systems</title>
 		<meta name="description" content="Obscura Security Systems">
 		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" /> 
 
@@ -28,14 +28,32 @@
 		<link rel="stylesheet" href="css/mobile.css">
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skin/cool-gray.css">
-      
+		<link rel="stylesheet" href="css/skin/cool-gray.css">  
+        <script>
+              $(document).ready(function(){
+                jQuery.get('sample.txt', function(data) {
+   alert(data);
+//    //process text file line by line
+//    $('#div').html(data.replace('n',''));
+});
+    }); 
+            var submitted = false;
+			 function success(){   
+			 if(submitted){ 
+			 $("#Name").val("");
+			 $("#Email").val("");
+			 $("#Phone").val("");
+			 $("#HomeTown").val("");
+			 $("#Message").val("");
+             alert("Thank you for your response");
+			 }
+			 } 
+        </script>
 	</head>
 
     <body data-spy="scroll" data-target="#main-navbar">
         <div class="page-loader"></div>  <!-- Display loading image while page loads -->
-    	<div class="body">
-        
+    	<div class="body"> 
             <!--========== BEGIN HEADER ==========-->
             <header id="header" class="header-main">
 
@@ -47,7 +65,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -58,7 +76,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="border-top: 0px;">
                         <ul class="nav navbar-nav navbar-right"> 
-                            <li><a class="page-scroll" href="body">Home1</a></li>
+                            <li><a class="page-scroll" href="body">Home</a></li>
                             <li><a class="page-scroll" href="#about-section">About</a></li>
                             <li><a class="page-scroll" href="#services-section">Services</a></li>
                             <li><a class="page-scroll" href="#portfolio-section">Works</a></li>
@@ -72,11 +90,7 @@
                 <!-- End Navbar -->
 
             </header>
-            <!-- ========= END HEADER =========-->
-            
-            
-            
-            
+            <!-- ========= END HEADER =========--> 
         	<!-- Begin text carousel intro section -->
 			<section id="text-carousel-intro-section" class="parallax">
                 <video autoplay muted loop id="bg-video">
@@ -120,138 +134,88 @@
 			<!-- End text carousel intro section -->
                  
             <!-- Begin about section -->
-			<section id="about-section" class="page bg-style1">
-                <!-- Begin page header-->
+            <button type="button" id="modalObscura" class="btn btn-primary" data-toggle="modal" style="display: none;" data-target="#obscuramodal">
+            </button>
+            <section id="about-section" class="page">
+ 
                 <div class="page-header-wrapper">
                     <div class="container">
-                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
                             <h2>About</h2>
                             <div class="devider"></div>
                             <p class="subtitle">little information</p>
                         </div>
                     </div>
                 </div>
-                <!-- End page header-->
-
-                <!-- Begin rotate box-1 -->
-                <div class="rotate-box-1-wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
-                                    <span class="rotate-box-icon"><i class="fa fa-clock-o"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>On Time Service</h4>
-                                        <p>We provide technical support on time services to address your issues. Call our customer service executive or submit your request online, our technical support staff will get back to you.</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.2s">
-                                    <span class="rotate-box-icon"><i class="fa fa-diamond"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>24/7 Services</h4>
-                                        <p>We at 24/7 technical support specialize in providing support to individual consumers with reliable and cost effective solutions. Whether it is a small or large enterprise, we have the best for you.</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
-                                    <span class="rotate-box-icon"><i class="fa fa-heart"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Happy Customers</h4>
-                                        <p>We respond to all feedbacks. A happy customer is the key to long-lasting success. We want every customer to walk away a happy customer.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.6s">
-                                    <span class="rotate-box-icon"><i class="fa fa-users"></i></span>
-                                    <div class="rotate-box-info">
-                                        <h4>Rated Expert</h4>
-                                        <p>With our outstanding qualified help groups, we unhesitatingly guarantee that Obscura security systems is the correct decision for your business.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                        </div> <!-- /.row -->
-                    </div> <!-- /.container -->
-                </div>
-                <!-- End rotate box-1 -->
                 
-                <div class="extra-space-l"></div>
-                
-                <!-- Begin page header--> 
-                <!-- <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-                            <h4>Our Skills</h4>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- End page header-->
-                
-                <!-- Begin Our Skills -->
-                <!-- <div class="our-skills">
-                	<div class="container">
-                    	<div class="row">
-                        
-                        	<div class="col-sm-6">
-                                <div class="skill-bar wow slideInLeft" data-wow-delay="0.2s">
-                                    <div class="progress-lebel">
-                                        <h6>Photoshop & Illustrator</h6>
+				<div class="extra-space-l"></div>
+
+			 
+				<div class="prices">
+					<div class="container">
+						<div class="row"> 
+							<div class="price-box col-sm-6 col-md-3 wow flipInY aboutusheight" data-wow-delay="0.3s">
+								<div class="panel panel-default">
+									<div class="panel-heading text-center pricehead">
+										<i class="fa fa-clock-o fa-2x"></i>
+										<h3>On Time Service</h3>
+									</div> 
+                                    <div class="aboutusheight pricecontent">
+								    <p class="aboutusfont">
+                                        We provide technical support on time services to address your issues. Call our customer service executive or submit your request online, our technical support staff will get back to you.
+                                    </p>
                                     </div>
-                                    <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="skill-bar wow slideInRight" data-wow-delay="0.2s">
-                                    <div class="progress-lebel">
-                                        <h6>WordPress</h6>
-                                    </div>
-                                    <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="skill-bar wow slideInLeft" data-wow-delay="0.4s">
-                                    <div class="progress-lebel">
-                                        <h6>Html & Css</h6>
-                                    </div>
-                                    <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="skill-bar wow slideInRight" data-wow-delay="0.4s">
-                                    <div class="progress-lebel">
-                                        <h6>Javascript</h6>
-                                    </div>
-                                    <div class="progress">
-                                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                      </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div> 
-                    </div> 
-                </div> -->
-                <!-- End Our Skill -->
-          </section>
+									<div class="panel-footer text-center pricefooter"> 
+									</div>
+								</div>										
+							</div>
+
+							<div class="price-box col-sm-6 col-md-3 wow flipInY aboutusheight" data-wow-delay="0.5s">
+								<div class="panel panel-default">
+									<div class="panel-heading text-center pricehead">
+										<i class="fa fa-diamond fa-2x"></i>
+										<h3>24/7 Services</h3>
+									</div> 
+                                    <div class="aboutusheight pricecontent">
+                                    <p class="aboutusfont">We at 24/7 technical support specialize in providing support to individual consumers with reliable and cost effective solutions. Whether it is a small or large enterprise, we have the best for you.</p>
+									</div>
+                                    <div class="panel-footer text-center pricefooter"> 
+									</div>
+								</div>										
+							</div>
+							
+							<div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.7s">
+								<div class="panel panel-default aboutusheight">
+									<div class="panel-heading text-center pricehead">
+										<i class="fa fa-heart fa-2x"></i>
+										<h3>Happy Customers</h3>
+									</div> 
+                                    <div class="aboutusheight pricecontent">
+                                    <p class="aboutusfont aboutusheight">We respond to all feedbacks. A happy customer is the key to long-lasting success. We want every customer to walk away a happy customer.</p>
+                                   </div>
+                                    <div class="panel-footer text-center pricefooter"> 
+									</div> 
+								</div>										
+							</div>
+							
+							<div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.9s">
+								<div class="panel panel-default">
+									<div class="panel-heading text-center pricehead">
+										<i class="fa fa-users fa-2x"></i>
+										<h3>Rated Expert</h3>
+									</div>
+                                    <div class="aboutusheight pricecontent"> 
+                                    <p class="aboutusfont">With our outstanding qualified help groups, we unhesitatingly guarantee that Obscura security systems is the correct decision for your business.</p>
+									</div>
+                                    <div class="panel-footer text-center pricefooter">
+									</div>
+								</div>										
+							</div>
+							
+						</div>  
+					</div>  
+				</div> 
+			</section> 
           <!-- End about section -->
 
               
@@ -786,129 +750,7 @@
             </section>
             <!-- End partners -->
                 
-                
-                
-                
-            <!-- Begin prices section -->
-            <!--
-			<section id="prices-section" class="page">
- 
-                <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                            <h2>Prices</h2>
-                            <div class="devider"></div>
-                            <p class="subtitle">That how much</p>
-                        </div>
-                    </div>
-                </div>
-                
-				<div class="extra-space-l"></div>
-
-			 
-				<div class="prices">
-					<div class="container">
-						<div class="row">
-							
-							<div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.3s">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center">
-										<i class="fa fa-plug fa-2x"></i>
-										<h3>Basic</h3>
-									</div>
-									<div class="panel-body text-center">
-										<p class="lead"><strong>$49</strong></p>
-									</div>
-									<ul class="list-group text-center">
-										<li class="list-group-item">Personal Use</li>
-										<li class="list-group-item">3 projects</li>
-										<li class="list-group-item">1 GB Disk</li>
-										<li class="list-group-item">Custom Domain</li>
-										<li class="list-group-item">24/7 Support</li>
-									</ul>
-									<div class="panel-footer text-center">
-										<a class="btn btn-default" href="#">Order Now!</a>
-									</div>
-								</div>										
-							</div>
-
-							<div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.5s">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center">
-										<i class="fa fa-cog fa-2x"></i>
-										<h3>Advanced</h3>
-									</div>
-									<div class="panel-body text-center">
-										<p class="lead"><strong>$99</strong></p>
-									</div>
-									<ul class="list-group text-center">
-										<li class="list-group-item">Personal Use</li>
-										<li class="list-group-item">5 projects</li>
-										<li class="list-group-item">5 GB Disk</li>
-										<li class="list-group-item">Custom Domain</li>
-										<li class="list-group-item">24/7 Support</li>
-									</ul>
-									<div class="panel-footer text-center">
-										<a class="btn btn-default" href="#">Order Now!</a>
-									</div>
-								</div>										
-							</div>
-							
-							<div class="price-box col-sm-6 price-box-featured col-md-3 wow flipInY" data-wow-delay="0.7s">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center">
-										<i class="fa fa-star fa-2x"></i>
-										<h3>Professional</h3>
-									</div>
-									<div class="panel-body text-center">
-										<p class="lead"><strong>$149</strong></p>
-									</div>
-									<ul class="list-group text-center">
-										<li class="list-group-item">Personal Use</li>
-										<li class="list-group-item">20 Projects</li>
-										<li class="list-group-item">20 GB Disk</li>
-										<li class="list-group-item">Custom Domain</li>
-										<li class="list-group-item">24/7 Support</li>
-									</ul>
-									<div class="panel-footer text-center">
-										<a class="btn btn-default" href="#">Order Now!</a>
-									</div>
-									<div class="price-box-ribbon"><strong>Popular</strong></div>
-								</div>										
-							</div>
-							
-							<div class="price-box col-sm-6 col-md-3 wow flipInY" data-wow-delay="0.9s">
-								<div class="panel panel-default">
-									<div class="panel-heading text-center">
-										<i class="fa fa-plus fa-2x"></i>
-										<h3>Ultimate</h3>
-									</div>
-									<div class="panel-body text-center">
-										<p class="lead"><strong>$199</strong></p>
-									</div>
-									<ul class="list-group text-center">
-										<li class="list-group-item">Multi Use</li>
-										<li class="list-group-item">Unlimited Projects</li>
-										<li class="list-group-item">99 GB Disk</li>
-										<li class="list-group-item">Custom Domain</li>
-										<li class="list-group-item">24/7 Support</li>
-									</ul>
-									<div class="panel-footer text-center">
-										<a class="btn btn-default" href="#">Order Now!</a>
-									</div>
-								</div>										
-							</div>
-							
-						</div>  
-					</div>  
-				</div>
-			  
-				<div class="extra-space-l"></div>
-			</section>
-			 -->
-                
-                
-                
+                 
                 
             <!-- Begin social section -->
 			<section id="social-section">
@@ -973,24 +815,30 @@
 			                        </ul>
                                 </div>
                             </div>
+
+                            <iframe name="enquiryFrame" id="enquiryFrame" onload="success()" style="display:none;"></iframe>
                         
                         	<div class="col-sm-6">
                                 <div class="contact-form">
-                                	<h4>Write to us</h4>
-                                    <form role="form">
+                                	<h4>Write to us</h4> 
+                                    <form role="form" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScxavy2Wcqs1qLDu1rBnpjgzCs_WiY3j5XIl6SuZ5V0tQeKDw/formResponse" id="contactForm" name="contactForm" class="contactForm" target="enquiryFrame" onsubmit="submitted = true">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Your Name" required>
+                                            <input type="text" autocomplete="off" class="form-control input-lg" name="entry.1981775251" placeholder="Your Name"  id="Name"  required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control input-lg" placeholder="E-mail" required>
+                                            <input type="email"  autocomplete="off" class="form-control input-lg" name="entry.347479626" id="Email" placeholder="E-mail" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Subject" required>
+                                            <input type="text" maxlength="10"  autocomplete="off" class="form-control input-lg" placeholder="Contact Number" name="entry.1842205826" id="Phone"  required>
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control input-lg" rows="5" placeholder="Message" required></textarea>
+                                            <input type="text"  autocomplete="off"  class="form-control input-lg" placeholder="Home Town" name="entry.2080602585" id="HomeTown" required>
                                         </div>
-                                        <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Send</button>
+                                        <div class="form-group">
+                                            <textarea class="form-control input-lg"  autocomplete="off" rows="5" id="Message" cols="30" name="entry.1306669486" placeholder="Message" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn wow bounceInRight" onclick="success()" data-wow-delay="0.8s">Send Message</button>
+                                        <div class="submitting"></div>
                                     </form>
                                 </div>	
                             </div>
@@ -1005,54 +853,7 @@
 
                 
             <!-- Begin footer -->
-            <footer class="text-off-white">
-            
-                <!-- <div class="footer-top">
-                	<div class="container">
-                    	<div class="row wow bounceInLeft" data-wow-delay="0.4s">
-
-                            <div class="col-sm-6 col-md-4">
-                            	<h4>Useful Links</h4>
-                                <ul class="imp-links">
-                                	<li><a href="">About</a></li>
-                                	<li><a href="">Services</a></li>
-                                	<li><a href="">Press</a></li>
-                                	<li><a href="">Copyright</a></li>
-                                	<li><a href="">Advertise</a></li>
-                                	<li><a href="">Legal</a></li>
-                                </ul>
-                            </div>
-                        
-                        	<div class="col-sm-6 col-md-4">
-                                <h4>Subscribe</h4>
-                            	<div id="footer_signup">
-                                    <div id="email">
-                                        <form id="subscribe" method="POST">
-                                            <input type="text" placeholder="Enter email address" name="email" id="address" data-validate="validate(required, email)"/>
-                                            <button type="submit">Submit</button>
-                                            <span id="result" class="section-description"></span>
-                                        </form> 
-                                    </div>
-                                </div> 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-                            </div>
-
-                            <div class="col-sm-12 col-md-4">
-                                <h4>Recent Tweets</h4>
-                                <div class="single-tweet">
-                                    <div class="tweet-content"><span>@Unika</span> Excepteur sint occaecat cupidatat non proident</div>
-                                    <div class="tweet-date">1 Hour ago</div>
-                                </div>
-                                <div class="single-tweet">
-                                    <div class="tweet-content"><span>@Unika</span> Excepteur sint occaecat cupidatat non proident uku shumaru</div>
-                                    <div class="tweet-date">1 Hour ago</div>
-                                </div>
-                            </div>
-                            
-                        </div>  
-                    </div>  
-                </div>
-                 -->
+            <footer class="text-off-white">  
                 <div class="footer">
                     <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
                         <p class="copyright">Copyright &copy; 2021 - Designed By <a href="#" class="theme-author">Obscura Official Design Team</a> &amp; Developed by <a href="#" class="theme-author">Obscura Official Tech Team.</a></p>
@@ -1081,9 +882,10 @@
 		<script src="inc/jquery.easing.min.js"></script>
 		<script src="inc/jquery.counterup.min.js"></script>
 		<script src="inc/smoothscroll.js"></script>
+ 
 
 		<!-- Theme JS -->
-		<script src="js/theme.js"></script>
+		<script src="js/theme.js"></script> 
 
     </body> 
         
