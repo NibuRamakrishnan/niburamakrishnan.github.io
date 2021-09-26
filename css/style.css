@@ -1053,7 +1053,8 @@ p.subtitle {
 
 /* Button blank */
 .btn-blank {
-	border: 2px solid #fff;
+	text-align: center;
+	border: 2px solid #204e4d;
 	color: #fff;
 	padding: 8px 12px;
 	display: inline-block;
@@ -1092,6 +1093,7 @@ p.subtitle {
 }
 .btn-blank:hover, .btn-blank:focus, .btn-blank:active {
 	color: #333;
+	border: 2px solid #204e4d;
 }
 .btn-blank:hover:before, .btn-blank:focus:before, .btn-blank:active:before {
 	-webkit-transform: scaleY(1);
@@ -1102,6 +1104,7 @@ p.subtitle {
 .btn:active, .btn.active {
 	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.16);
 	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.16);
+	border: 2px solid #204e4d;
 }
 
 /* Button large */
@@ -1262,5 +1265,13 @@ p.subtitle {
 }
 #advertismentModal{
 	text-align: center; 
+}
+
+.maxheight715{
+	max-height: 715px !important;
+}
+.btncentre{
+	text-align: center; 
+	width: 100%;
 }
 /* ===== End buttons ===== */
