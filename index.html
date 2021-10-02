@@ -374,7 +374,7 @@
                                 <div class="portfoloi_content_area" >
                                     <div class="portfolio_menu" id="filters">
                                         <ul>
-                                            <li class="active_prot_menu"><a href="#porfolio_menu" data-filter="*">all</a></li>
+                                            <li class="active_prot_menu"><a href="#porfolio_menu" class="workmenu" allwork="true" data-filter="*">all</a></li>
                                             <li><a class="workmenu" href="#porfolio_menu" data-filter=".cctv">CCTV</a></li>
                                             <li><a class="workmenu" href="#porfolio_menu" data-filter=".Intercom" >INTERCOM</a></li>
                                             <li><a class="workmenu" href="#porfolio_menu" data-filter=".networking">NETWORKING</a></li>
@@ -441,6 +441,7 @@
                                                     </div>
                                                 </div>
                                             </div>  
+                                            <div id="workLimitController" style="display: none;">
                                             <div class="col-xs-12 col-sm-4 networking">
                                                 <div class="portfolio_single_content">
                                                     <img src="img/portfolio/NETWORKING/NET1.jpg" alt="title"/>
@@ -449,8 +450,8 @@
                                                         <span>Grand Centre Mall, Muvattupuzha</span>
                                                     </div>
                                                 </div>
-                                            </div> 
-                                            
+                                            </div>  
+
                                             <div class="col-xs-12 col-sm-4 cctv">
                                                 <div class="portfolio_single_content">
                                                     <img src="img/portfolio/CCTV/FSC.jpg" alt="title"/>
@@ -487,6 +488,7 @@
                                                     </div>
                                                 </div>
                                             </div>   
+                                        </div>
                                             <!--Ending images for CCTV-->
                                             <!--Starting Images for Networking-->
                                             <!-- <div class="col-xs-12 col-sm-4 networking">
@@ -894,18 +896,20 @@
 		<script src="inc/smoothscroll.js"></script>  
 		<!-- Theme JS -->
 		<script src="js/theme.js"></script> 
-        <script> 
-        $(".workmenu").click(function () {
+        <script>  
+        $(".workmenu").click(function () {  
             var imageCategory = $(this).attr("data-filter");
                var numberofImages = 0;
-               if(imageCategory == "*")
+               if(imageCategory == "*" || ($(this).attr("allwork") != 'undefined' && $(this).attr("allwork")  == "true"))
                imageCategory = ".cctv";
                if(imageCategory != "*"){
-                numberofImages = ($("#portfolio").find(imageCategory).length);
+                numberofImages = ($("#portfolio").find(imageCategory).length);   
                 if(numberofImages < 5){
                     $("#viewmorebtn").css("display","none");
+                    $("#workLimitController").css("display","block");
                 }
-                else{
+                else{ 
+                    $("#workLimitController").css("display","none");
                     $("#viewmorebtn").css("display","block");
                     $("#viewmorebtn").find("a").attr("imagecategory",imageCategory);
                 }
